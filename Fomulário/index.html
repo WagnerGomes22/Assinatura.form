@@ -7,52 +7,54 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&display=swap"
         rel="stylesheet">
+
     <title>Assinatura custom</title>
 </head>
 
 <body>
     <div class="background">
         <div>
-            <h1 class="titulo">Crie sua asssinatura</h1>
+            <h1 class="titulo">Crie sua assinatura</h1>
             <p class="subtitulo">Complete suas informações</p>
         </div>
 
         <form>
             <fieldset class="grupo">
-                <div class="campo">
-                    <label for="Nome"><strong>Nome:</strong></label>
+                <div class="campo nomeCampo">
+                    <label for="nome"><strong>Nome:</strong></label>
                     <input type="text" name="name" id="name" placeholder="Digite seu Nome" required>
                 </div>
-                <div class="campo">
+                <div class="campo sobrenomeCampo">
                     <label for="sobrenome"><strong>Sobrenome:</strong></label>
                     <input type="text" name="Sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome">
                 </div>
+
+
+
                 <div class="campo">
-                    <label for="Telefone"><strong>Telefone:</strong></label>
-                    <input type="tel" name="Telefone" id="telefone" placeholder="Digite seu Telefone">
+                    <label for="setor">Qual o seu setor?</label>
+                    <select id="setor">
+
+                        <option selected disabled value="">Selecione</option>
+                        <option value="desenvolvimento">Desenvolvimento</option>
+                        <option value="admiministrativo">Admiministrativo</option>
+                        <option value="design">Design</option>
+                        <option value="analista">Analista de dados</option>
+                        <option value="seo">SEO</option>
+
+                    </select>
+
                 </div>
+
             </fieldset>
-
-            <div class="campo">
-                <label>Qual o seu setor?</label>
-                <select id="setor">
-
-                    <option selected disabled value="">Selecione</option>
-                    <option value="junior">desenvolvimento</option>
-                    <option value="Pleno">admiministrativo</option>
-                    <option value="Senior">design</option>
-                    <option value="Senior">analista de dados</option>
-                    <option value="Senior">SEO</option>
-
-                </select>
-            </div>
         </form>
-        <button type="submit" class="btn">Gerar</button>
-        <div id="resultado">
-
+        <div class="botao">
+            <button type="submit" class="btn" onclick="submitForm()">Gerar</button>
         </div>
+
+        <div id="resultado"></div>
     </div>
 </body>
 

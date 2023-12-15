@@ -1,39 +1,42 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&display=swap');
 
-.titulo{
-    color: #442108;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    border-bottom: 2.3px solid rgb(0, 0, 0);
-    padding-bottom: 4px;
+.titulo {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-bottom: 2.3px solid rgb(0, 0, 0);
+  padding-bottom: 4px;
+  color: white;
 }
 
-.subtitulo{
+.subtitulo {
   text-align: center;
   padding: 20px;
   font-size: 1.2rem;
+  color: white;
 }
 
 
-fieldset{
+fieldset {
   margin-top: 3%;
   border: none
 }
 
 
-.grupo{
+.grupo {
   border-radius: 10px;
   padding: 20px;
 }
 
-body{
-  background-color:#F0F8FF;
+body {
+  background-color: #F0F8FF;
   font-size: 1rem;
   margin-left: 30%;
   margin-right: 30%;
@@ -42,57 +45,76 @@ body{
 
 }
 
-.background{
-  background-color: #fba417e1;
+.background {
+  background-color: #333333;
   padding: 30px;
   border-radius: 15px
 }
-input, select, textarea, button{
+
+input,
+select,
+textarea,
+button {
   border-radius: 5px;
 }
 
-input, select{
+input,
+select {
   font-size: 1rem;
   padding: 3px;
   border: 1px solid #000;
   box-shadow: 2px 2px 2px black;
 }
 
-#resultado{
+#resultado {
   font-size: 1.3rem;
 }
 
-.campo{
+.campo {
   margin-bottom: 1rem;
   border-radius: 50%;
 }
 
-.campo label{
+.campo label {
   margin-bottom: 0.2rem;
-  color: #000;
   display: block;
   font-size: 20px;
+  color: white;
 }
 
-.btn{
-    border: solid 1px blue;
-    padding: 10px 20px 10px 20px;
-    border-radius: 10px;
-    color: blue;
-    background-color: white;
-    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
-    
-}
-.btn:hover{
-    background-color: blue;
-    color: white;
-    transform: scale(1.2)
+label{
+  color: black;
 }
 
-.background buttongi{
-  text-align: center !important;
+
+.btn {
+  border: solid 1px rgb(255, 187, 0);
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+
+
 }
 
-  
+.btn:hover {
+  background-color: #FFA100;
+  color: white;
+  transform: scale(1.2)
+}
+
+.botao {
+  text-align: center;
+}
+
+#resultado {
+  font-family: arial, sans-serif;
+  margin-top: 20px;
+  font-size: 0.6rem;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+
 /* .campo input[type="text"], .campo input[type="email"] */
-
