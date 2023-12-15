@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap');
 
 .titulo{
-    color: #8B4513;
+    color: #442108;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -20,13 +20,16 @@
   font-size: 1.2rem;
 }
 
+
 fieldset{
   margin-top: 3%;
+  border: none
 }
 
 
 .grupo{
   border-radius: 10px;
+  padding: 20px;
 }
 
 body{
@@ -36,8 +39,14 @@ body{
   margin-right: 30%;
   margin-top: 2%;
   justify-content: center;
+
 }
 
+.background{
+  background-color: #fba417e1;
+  padding: 30px;
+  border-radius: 15px
+}
 input, select, textarea, button{
   border-radius: 5px;
 }
@@ -72,6 +81,7 @@ input, select{
     color: blue;
     background-color: white;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    
 }
 .btn:hover{
     background-color: blue;
@@ -79,5 +89,10 @@ input, select{
     transform: scale(1.2)
 }
 
+.background buttongi{
+  text-align: center !important;
+}
+
+  
 /* .campo input[type="text"], .campo input[type="email"] */
 

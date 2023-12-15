@@ -6,50 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap"
+        rel="stylesheet">
     <title>Assinatura custom</title>
 </head>
 
 <body>
-    <div>
-        <h1 class="titulo">Crie sua asssinatura</h1>
-        <p class="subtitulo">Complete suas informações</p>
-    </div>
+    <div class="background">
+        <div>
+            <h1 class="titulo">Crie sua asssinatura</h1>
+            <p class="subtitulo">Complete suas informações</p>
+        </div>
 
-    <form>
-        <fieldset class="grupo">
-            <div class="campo"> 
-                <label for="Nome"><strong>Nome:</strong></label>
-                <input type="text" name="name" id="name" placeholder="Digite seu Nome" required>
-            </div>
+        <form>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="Nome"><strong>Nome:</strong></label>
+                    <input type="text" name="name" id="name" placeholder="Digite seu Nome" required>
+                </div>
+                <div class="campo">
+                    <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                    <input type="text" name="Sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome">
+                </div>
+                <div class="campo">
+                    <label for="Telefone"><strong>Telefone:</strong></label>
+                    <input type="tel" name="Telefone" id="telefone" placeholder="Digite seu Telefone">
+                </div>
+            </fieldset>
+
             <div class="campo">
-                <label for="sobrenome"><strong>Sobrenome:</strong></label>
-                <input type="text" name="Sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome">
+                <label>Qual o seu setor?</label>
+                <select id="setor">
+
+                    <option selected disabled value="">Selecione</option>
+                    <option value="junior">desenvolvimento</option>
+                    <option value="Pleno">admiministrativo</option>
+                    <option value="Senior">design</option>
+                    <option value="Senior">analista de dados</option>
+                    <option value="Senior">SEO</option>
+
+                </select>
             </div>
-        </fieldset>
+        </form>
+        <button type="submit" class="btn">Gerar</button>
+        <div id="resultado">
 
-        <div class="campo">
-            <label for="Telefone"><strong>Telefone:</strong></label>
-            <input type="tel" name="Telefone" id="telefone" placeholder="Digite seu Telefone">
         </div>
-
-        <div class="campo">
-            <label>Qual o seu setor?</label>
-            <select id="setor">
-
-                <option selected disabled value="">Selecione</option>
-                <option value="junior">desenvolvimento</option>
-                <option value="Pleno">admministrativo</option>
-                <option value="Senior">design</option>
-                <option value="Senior">analista de dados</option>
-                <option value="Senior">SEO</option>
-
-            </select>
-        </div>
-    </form>
-    <button type="submit" class="btn">Gerar</button>
-    <div id="resultado">
-
     </div>
 </body>
 

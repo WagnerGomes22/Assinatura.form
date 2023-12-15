@@ -3,8 +3,8 @@ const sobrenome = document.querySelector('#sobrenome').value;
 const telefone = document.querySelector('#telefone').value;
 const setor = document.querySelector('#setor').value;
 
-const assinatura = `${nome} ${sobrenome}
+const resultado = `${nome} ${sobrenome}
 Telefone: ${telefone}
 Setor: ${setor}`;
 
-console.log(assinatura);
+console.log(resultado);
