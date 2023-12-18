@@ -117,4 +117,10 @@ label{
   border-radius: 15px;
 }
 
+.info-resultado{
+  color: black;
+  text-transform: uppercase;
+  user-select: none;
+  font-weight: bold;
+}
 /* .campo input[type="text"], .campo input[type="email"] */
