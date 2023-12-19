@@ -10,7 +10,7 @@ function submitForm() {
     document.getElementById('resultado').style.display = 'block';
 
     // validar as Strigs, aceita apenas letras, aceitando apostofros e // acentuação
-    
+
     const validarStrings = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/;
 
     if (!validarStrings.test(nome) || !validarStrings.test(sobrenome) || !validarStrings.test(setor)) {
@@ -24,10 +24,13 @@ function submitForm() {
         return;
     }
 
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 
-    let assinatura = '<p class="info-resultado"> Copie e cole na sua assinatura de email o conteúdo abaixo</p>' + '<br>' + '<b style="color:rgb(255,153,0);font-size:12.8px">______________________________<wbr>___________</b>' + '<br><br>' + `<strong> ${nome} </strong>` + '&nbsp' + `<strong> ${sobrenome} </strong>` + '<br><br>' + setor + '<br><br>' + 'Tel. + 55 11 2364.9621' + '<br><br>' + '<a href="https://www.google.com.br/maps/place/Av.+Dr.+Cardoso+de+Melo,+878+-+Vila+Olimpia,+S%C3%A3o+Paulo+-+SP/@-23.5994907,-46.6845672,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce574db507d2a5:0x1532f65db5b9bcc7!8m2!3d-23.5994907!4d-46.6823785?shorturl=1">Av. Cardoso de Melo 878 - Vila Olímpia - São Paulo - SP 04548-003</a>' + '<br><br>'
-        + 'Visite nossos canais:  <a href="https://www.google.com/url?q=https%3A%2F%2Fapis3.com.br%2F&sa=D&sntz=1&usg=AFQjCNGrdVRAS4aXMeBle3ZGgWzsoRowIg">Site</a>  /  <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.facebook.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNEfGJb1kooKxeQDvBknllnUGA-ePA">Facebook</a>  /  <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.instagram.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNFo_9x1n7MClVvBR1Q3DFqEU_PRaA">Instagram</a>  /  <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fapis3%2F&sa=D&sntz=1&usg=AFQjCNFDYUqjdvH4u_v8rGBDibVzDdCiew">LinkedIn</a>  /  <a href="https://www.youtube.com/apis3">YouTube</a>' +
-        '<br><br>';
+    setor = capitalizeFirstLetter(setor);
+
+    let assinatura = '<b style="color:rgb(255,153,0);font-size:12.8px">______________________________<wbr>___________</b>' + '<br>' + `<strong>${nome}</strong>` + '&nbsp' + `<strong>${sobrenome}</strong>` + '<br>' + setor + '<br>' + '<p id="tel">Tel. + 55 11 2364.9621</p>' + '<p id="endereco"><a href="https://www.google.com.br/maps/place/Av.+Dr.+Cardoso+de+Melo,+878+-+Vila+Olimpia,+S%C3%A3o+Paulo+-+SP/@-23.5994907,-46.6845672,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce574db507d2a5:0x1532f65db5b9bcc7!8m2!3d-23.5994907!4d-46.6823785?shorturl=1"</p>Av. Cardoso de Melo 878 - Vila Olímpia - São Paulo - SP 04548-003</a></p>' + '<br>' + '<p id="canais">Visite nossos canais: <a href="https://www.google.com/url?q=https%3A%2F%2Fapis3.com.br%2F&sa=D&sntz=1&usg=AFQjCNGrdVRAS4aXMeBle3ZGgWzsoRowIg">Site</a> / <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.facebook.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNEfGJb1kooKxeQDvBknllnUGA-ePA">Facebook</a> / <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.instagram.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNFo_9x1n7MClVvBR1Q3DFqEU_PRaA">Instagram</a> / <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fapis3%2F&sa=D&sntz=1&usg=AFQjCNFDYUqjdvH4u_v8rGBDibVzDdCiew">LinkedIn</a> / <a href="https://www.youtube.com/apis3">YouTube</a></p>' + '<br>';
 
     document.getElementById('resultado').innerHTML = assinatura;
     document.getElementById('resultado').appendChild(imgElement);
@@ -35,25 +38,23 @@ function submitForm() {
     document.getElementById('sobrenome').value = '';
     document.getElementById('setor').value = '';
     return assinatura;
-    
+
 }
 
 
 function CopiarAssinatura() {
+    let resultado = document.getElementById('resultado');
 
-    assinatura = document.getElementById('resultado').innerText;
+    let range = document.createRange();
+    range.selectNodeContents(resultado);
 
-    let textarea = document.createElement('textarea');
-
-    textarea.value = assinatura;
-    document.body.appendChild(textarea);
-
-    textarea.select();
-    textarea.setSelectionRange(0, 99999); // Para dispositivos móveis
+    let selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
 
     document.execCommand('copy');
 
-    document.body.removeChild(textarea);
+    selection.removeAllRanges();
 
     alert('Resultado copiado');
 }

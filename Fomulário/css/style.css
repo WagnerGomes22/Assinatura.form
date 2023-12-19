@@ -16,8 +16,9 @@
   padding-bottom: 4px;
   color: white;
   font-family: 'Monstserrat';
-  color: #000;
-  text-transform: uppercase
+  color: #f3f3f3;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .subtitulo {
@@ -25,28 +26,33 @@
   padding: 20px;
   font-size: 16px;
   color: #000;
-  font-family: 'Roboto';
   font-weight: 500;
 }
 
 
 fieldset {
   margin-top: 3%;
-  border: none
+  border: none;
 }
-
 
 .grupo {
   border-radius: 10px;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
+
+.campo.setor{
+  margin-left: 20px;
+}
+
 
 body {
   background-color: #3b3b3b;
   font-size: 1rem;
   margin-left: 30%;
   margin-right: 30%;
-  margin-top: 2%;
+  margin-top: 7%;
   justify-content: center;
 
 }
@@ -54,7 +60,7 @@ body {
 .background {
   background-color: #fcae18;
   padding: 30px;
-  border-radius: 15px
+  border-radius: 15px;
 }
 
 input,
@@ -90,11 +96,12 @@ select {
   color: white;
 }
 
+
 label {
   color: black;
 }
 
-.div-botao-form{
+.div-botao-form {
   text-align: center;
 }
 
@@ -113,12 +120,12 @@ label {
   transform: scale(1.2)
 }
 
-.div-botao-copiar{
+.div-botao-copiar {
   text-align: center;
   margin-top: 20px;
 }
 
-.btn-copiar-assinatura{
+.btn-copiar-assinatura {
   border: solid 1px;
   padding: 10px 20px 10px 20px;
   border-radius: 10px;
@@ -143,6 +150,18 @@ label {
   text-transform: uppercase;
   user-select: none;
   font-weight: bold;
+}
+
+#tel {
+  line-height: 2;
+}
+
+#endereco {
+  line-height: 2;
+}
+
+#canais {
+  line-height: 0;
 }
 
 /* .campo input[type="text"], .campo input[type="email"] */

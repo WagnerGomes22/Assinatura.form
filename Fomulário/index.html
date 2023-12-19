@@ -9,10 +9,10 @@
     <!-- <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&display=swap"
         rel="stylesheet"> -->
-        <link rel="shortcut icon" href="https://a-us.storyblok.com/f/1006947/x/e39e2f116a/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://a-us.storyblok.com/f/1006947/x/e39e2f116a/favicon.ico" type="image/x-icon">
 
     <title>Apis3/Assinatura</title>
-    
+
 </head>
 
 <body>
@@ -24,42 +24,41 @@
 
         <form>
             <fieldset class="grupo">
-                <div class="campo nomeCampo">
+                <div class="campo nome">
                     <label for="nome"><strong>Nome:</strong></label>
                     <input type="text" name="name" id="name" placeholder="Digite seu Nome" required>
                 </div>
-                <div class="campo sobrenomeCampo">
+                <div class="campo sobrenome">
                     <label for="sobrenome"><strong>Sobrenome:</strong></label>
                     <input type="text" name="Sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome">
                 </div>
-
-
-
-                <div class="campo">
-                    <label for="setor"><strong>Qual o seu setor?</strong></label>
-                    <select id="setor">
-
-                        <option selected disabled value="">Selecione</option>
-                        <option value="desenvolvimento">Desenvolvimento</option>
-                        <option value="admiministrativo">Admiministrativo</option>
-                        <option value="design">Design</option>
-                        <option value="analista">Analista de dados</option>
-                        <option value="seo">SEO</option>
-
-                    </select>
-
-                </div>
-
             </fieldset>
+
+            <div class="campo setor">
+                <label for="setor"><strong>Qual o seu setor?</strong></label>
+                <select id="setor">
+
+                    <option selected disabled value="">Selecione</option>
+                    <option value="desenvolvimento">Desenvolvimento</option>
+                    <option value="admiministrativo">Admiministrativo</option>
+                    <option value="design">Design</option>
+                    <option value="analista">Analista de dados</option>
+                    <option value="seo">SEO</option>
+
+                </select>
+
+            </div>
+
         </form>
         <div class="div-botao-form">
             <button type="submit" class="btn-form" onclick="submitForm()">Gerar</button>
         </div>
 
         <div id="resultado"></div>
-        
+
         <div class="div-botao-copiar">
-            <button type="submit" id="btn-copiar-assinatura" class="btn-copiar-assinatura" onclick="CopiarAssinatura()">Copiar</button>
+            <button type="submit" id="btn-copiar-assinatura" class="btn-copiar-assinatura"
+                onclick="CopiarAssinatura()">Copiar</button>
         </div>
     </div>
 </body>
