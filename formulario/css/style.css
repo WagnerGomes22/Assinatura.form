@@ -20,14 +20,13 @@
   font-weight: 700;
 }
 
-.titulo::after {
+.background::before {
   content: "";
   background-image: url('https://a-us.storyblok.com/f/1006947/x/e39e2f116a/favicon.ico');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center right;
-  padding-left: 20px;
-  padding: 2rem;
+  background-position: 1rem, 1rem;
+  padding: 1.3rem;
 }
 
 
@@ -157,9 +156,10 @@ label {
   display: none;
 }
 
-.campoTelefone{
-  justify-content: space-between;
-  margin-left: 20px;
+.campotelefone{
+  justify-content: flex-end;
+  display: flex;
+  margin-bottom: 40px;
 }
 
 .info-resultado {
