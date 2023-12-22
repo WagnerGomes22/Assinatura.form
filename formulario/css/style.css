@@ -14,10 +14,9 @@
   display: flex;
   border-bottom: 2.3px solid rgb(0, 0, 0);
   padding-bottom: 4px;
-  font-family: 'Times New Roman', Times, serif;
   color: #000000;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: lighter;
 }
 
 .background::before {
@@ -25,7 +24,6 @@
   background-image: url('https://a-us.storyblok.com/f/1006947/x/e39e2f116a/favicon.ico');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 1rem, 1rem;
   padding: 1.3rem;
 }
 
@@ -51,12 +49,14 @@ fieldset {
   justify-content: space-between;
 }
 
-
-
 .campo.setor {
   margin-left: 20px;
 }
 
+
+.campo.setor-adicional{
+  margin-left: 20px;
+}
 
 body {
   background: linear-gradient(to right, #FFA100, #FF4500);
@@ -107,6 +107,35 @@ select {
   color: black;
 }
 
+/* Adicione estas regras ao seu CSS existente */
+
+/* Estilizando a seta do select */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('sua-imagem-de-seta.png') no-repeat right center / 15px 15px;
+}
+
+/* Personalizando o estilo do select */
+select {
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px black;
+  background-color: #f3f3f3;
+  color: black;
+  cursor: pointer;
+}
+
+/* Adicionando estilo quando o select está focado */
+select:focus {
+  outline: none;
+  border-color: #FFA100;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+
 
 label {
   color: black;
@@ -156,10 +185,12 @@ label {
   display: none;
 }
 
-.campotelefone{
-  justify-content: flex-end;
+.campocelular{
+  flex-direction: column;
   display: flex;
   margin-bottom: 40px;
+  width: 40%;
+  margin-left: 20px;
 }
 
 .info-resultado {

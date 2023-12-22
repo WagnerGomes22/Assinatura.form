@@ -17,59 +17,77 @@
 
 <body>
     <div class="background">
-        <div>
-            <h1 class="titulo">Crie sua assinatura</h1>
-            <p class="subtitulo">Complete suas informações</p>
-        </div>
+        <header>
+            <div>
+                <h1 class="titulo">Crie sua assinatura</h1>
+                <p class="subtitulo">Complete suas informações</p>
+            </div>
+        </header>
+        <main>
+            <form>
+                <fieldset class="grupo">
+                    <div class="camponome">
+                        <label for="nome"><strong>Nome:</strong></label>
+                        <input type="text" name="name" id="name" placeholder="Digite seu Nome" required>
+                    </div>
+                    <div class="camposobrenome">
+                        <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                        <input type="text" name="Sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome">
+                    </div>
 
-        <form>
-            <fieldset class="grupo">
-                <div class="camponome">
-                    <label for="nome"><strong>Nome:</strong></label>
-                    <input type="text" name="name" id="name" placeholder="Digite seu Nome" required>
+                </fieldset>
+
+                <div class="campocelular">
+                    <label for="telefone"><strong>Celular:</strong></label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Opicional">
                 </div>
-                <div class="camposobrenome">
-                    <label for="sobrenome"><strong>Sobrenome:</strong></label>
-                    <input type="text" name="Sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome">
+
+
+
+                <div class="campo setor">
+                    <label for="setor"><strong>Qual o seu setor?</strong></label>
+                    <select id="setor">
+
+                        <option selected disabled value="">Selecione</option>
+                        <option value="desenvolvimento">Desenvolvimento</option>
+                        <option value="admiministrativo">Admiministrativo</option>
+                        <option value="design">Design</option>
+                        <option value="analista">Analista de dados</option>
+                        <option value="seo">SEO</option>
+
+                    </select>
+
                 </div>
-               
-            </fieldset>
 
-             <div class="campotelefone">
-                    <label for="telefone"><strong>Telefone:</strong></label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="Digite seu Telefone">
+
+                <div class="campo setor-adicional">
+                    <label for="setor"><strong>Setor adicional</strong></label>
+                    <select id="setor">
+
+                        <option selected disabled value="">Selecione</option>
+                        <option value="desenvolvimento">Desenvolvimento</option>
+                        <option value="admiministrativo">Admiministrativo</option>
+                        <option value="design">Design</option>
+                        <option value="analista">Analista de dados</option>
+                        <option value="seo">SEO</option>
+
+                    </select>
+
                 </div>
 
 
-
-            <div class="campo setor">
-                <label for="setor"><strong>Qual o seu setor?</strong></label>
-                <select id="setor">
-
-                    <option selected disabled value="">Selecione</option>
-                    <option value="desenvolvimento">Desenvolvimento</option>
-                    <option value="admiministrativo">Admiministrativo</option>
-                    <option value="design">Design</option>
-                    <option value="analista">Analista de dados</option>
-                    <option value="seo">SEO</option>
-
-                </select>
-
+            </form>
+            <div class="div-botao-form">
+                <button type="submit" class="btn-form" onclick="submitForm()">Gerar</button>
             </div>
 
+            <div id="resultado"></div>
 
-
-        </form>
-        <div class="div-botao-form">
-            <button type="submit" class="btn-form" onclick="submitForm()">Gerar</button>
-        </div>
-
-        <div id="resultado"></div>
-
-        <div class="div-botao-copiar">
-            <button type="submit" id="btn-copiar-assinatura" class="btn-copiar-assinatura"
-                onclick="CopiarAssinatura()">Copiar</button>
-        </div>
+            <div class="div-botao-copiar">
+                <button type="submit" id="btn-copiar-assinatura" class="btn-copiar-assinatura"
+                    onclick="CopiarAssinatura()">Copiar</button>
+        </main>
+    </div>
     </div>
 </body>
 
