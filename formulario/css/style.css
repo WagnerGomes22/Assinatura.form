@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto';
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&display=swap');
@@ -17,6 +16,7 @@
   color: #000000;
   text-transform: uppercase;
   font-weight: lighter;
+  font-family: 'Montserrat';
 }
 
 .background::before {
@@ -33,7 +33,8 @@
   padding: 20px;
   font-size: 16px;
   color: #000;
-  font-weight: 500;
+  font-weight: lighter;
+  font-family: 'Montserrat';
 }
 
 
@@ -42,20 +43,25 @@ fieldset {
   border: none;
 }
 
+
 .grupo {
   border-radius: 10px;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  font-family: 'Roboto';
+  gap: 15px;
 }
+
 
 .campo.setor {
   margin-left: 20px;
 }
 
 
-.campo.setor-adicional{
+.campo.setor-adicional {
   margin-left: 20px;
+ 
+ 
 }
 
 body {
@@ -81,6 +87,10 @@ button {
   border-radius: 5px;
 }
 
+placeholder {
+  font-family: "Roboto";
+}
+
 input,
 select {
   font-size: 1rem;
@@ -98,6 +108,7 @@ select {
 .campo {
   margin-bottom: 1rem;
   border-radius: 50%;
+  font-family: 'Roboto';
 }
 
 .campo label {
@@ -107,9 +118,7 @@ select {
   color: black;
 }
 
-/* Adicione estas regras ao seu CSS existente */
 
-/* Estilizando a seta do select */
 select {
   appearance: none;
   -webkit-appearance: none;
@@ -117,7 +126,6 @@ select {
   background: url('sua-imagem-de-seta.png') no-repeat right center / 15px 15px;
 }
 
-/* Personalizando o estilo do select */
 select {
   font-size: 16px;
   border: 1px solid black;
@@ -128,7 +136,7 @@ select {
   cursor: pointer;
 }
 
-/* Adicionando estilo quando o select está focado */
+
 select:focus {
   outline: none;
   border-color: #FFA100;
@@ -185,7 +193,7 @@ label {
   display: none;
 }
 
-.campocelular{
+.campocelular {
   flex-direction: column;
   display: flex;
   margin-bottom: 40px;
@@ -202,6 +210,10 @@ label {
 
 #tel {
   line-height: 2;
+}
+
+#telefone {
+  display: flex;
 }
 
 #endereco {

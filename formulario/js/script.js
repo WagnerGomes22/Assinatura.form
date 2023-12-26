@@ -15,26 +15,28 @@ function submitForm() {
     const validarStrings = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/;
 
     if (!validarStrings.test(nome) || !validarStrings.test(sobrenome) || !validarStrings.test(setor)) {
-        alert('Por favor, preencha todos os campos com apenas letras.');
-        return;
-    }
-
-    // caso esteja vazio exibir uma alert
-    if (nome === '' || sobrenome === '' || setor === '') {
         alert('Por favor, preencha todos os campos.');
         return;
     }
 
-    const validarTelefone = /^$|^\d+$/;
+    // caso esteja vazio exibir uma alert
+    // if (nome === '' || sobrenome === '' || setor === '') {
+    //     alert('Por favor, preencha todos os campos.');
+    //     return;
+    // }
 
-    if (!validarTelefone.test(telefone)) {
-        alert('Por favor, insira um número de telefone válido (apenas números) ou deixe em branco.');
+    const validarCelular = /^\d{2}\d{8}$/;
+
+    if (telefone && !validarCelular.test(telefone)) {
+        alert('Por favor, insira um número de celular válido ou deixe em branco.');
         return;
     }
-
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
+
+    const numerosDeTelefone = telefone ? `<p id="tel">Cel. + ${telefone} / Tel. + 55 11 2364.9621</p>` : '<p id="tel">Tel. + 55 11 2364.9621</p>';
+
 
     setor = capitalizeFirstLetter(setor);
 
@@ -46,8 +48,7 @@ function submitForm() {
         `<strong>${sobrenome}</strong>` +
         '<br>' +
         setor +
-        (telefone ? '<p id="tel">Cel. ' + telefone + '</p>' : '') +
-        '<p id="tel">Tel. + 55 11 2364.9621</p>' +
+        numerosDeTelefone +
         '<p id="endereco"><a href="https://www.google.com.br/maps/place/Av.+Dr.+Cardoso+de+Melo,+878+-+Vila+Olimpia,+S%C3%A3o+Paulo+-+SP/@-23.5994907,-46.6845672,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce574db507d2a5:0x1532f65db5b9bcc7!8m2!3d-23.5994907!4d-46.6823785?shorturl=1">Av. Cardoso de Melo 878 - Vila Olímpia - São Paulo - SP 04548-003</a></p>' +
         '<br>' +
         '<p id="canais">Visite nossos canais: <a href="https://www.google.com/url?q=https%3A%2F%2Fapis3.com.br%2F&sa=D&sntz=1&usg=AFQjCNGrdVRAS4aXMeBle3ZGgWzsoRowIg">Site</a> / <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.facebook.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNEfGJb1kooKxeQDvBknllnUGA-ePA">Facebook</a> / <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.instagram.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNFo_9x1n7MClVvBR1Q3DFqEU_PRaA">Instagram</a></p>' +
