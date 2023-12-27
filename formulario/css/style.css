@@ -7,6 +7,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
 
+body {
+  background: linear-gradient(to right, #FFA100, #FF4500);
+  font-size: 1rem;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 1%;
+  justify-content: center;
+
+}
+
 .titulo {
   align-items: center;
   justify-content: center;
@@ -19,15 +29,6 @@
   font-family: 'Montserrat';
 }
 
-.background::before {
-  content: "";
-  background-image: url('https://a-us.storyblok.com/f/1006947/x/e39e2f116a/favicon.ico');
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding: 1.3rem;
-}
-
-
 .subtitulo {
   text-align: center;
   padding: 20px;
@@ -37,6 +38,20 @@
   font-family: 'Montserrat';
 }
 
+.background {
+  background-color: #f3f3f3;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+
+.background::before {
+  content: "";
+  background-image: url('https://a-us.storyblok.com/f/1006947/x/e39e2f116a/favicon.ico');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 1.3rem;
+}
 
 fieldset {
   margin-top: 3%;
@@ -50,6 +65,7 @@ fieldset {
   display: flex;
   font-family: 'Roboto';
   gap: 15px;
+  justify-content: space-between;
 }
 
 
@@ -57,28 +73,11 @@ fieldset {
   margin-left: 20px;
 }
 
-
-.campo.setor-adicional {
-  margin-left: 20px;
- 
- 
+.campo.setor.ad {
+  margin-right: auto; /* Move para o lado direito */
 }
 
-body {
-  background: linear-gradient(to right, #FFA100, #FF4500);
-  font-size: 1rem;
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-top: 7%;
-  justify-content: center;
 
-}
-
-.background {
-  background-color: #f3f3f3;
-  padding: 30px;
-  border-radius: 15px;
-}
 
 input,
 select,
@@ -87,7 +86,7 @@ button {
   border-radius: 5px;
 }
 
-placeholder {
+::placeholder {
   font-family: "Roboto";
 }
 
@@ -118,14 +117,6 @@ select {
   color: black;
 }
 
-
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: url('sua-imagem-de-seta.png') no-repeat right center / 15px 15px;
-}
-
 select {
   font-size: 16px;
   border: 1px solid black;
@@ -142,7 +133,6 @@ select:focus {
   border-color: #FFA100;
   box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
 }
-
 
 
 label {
