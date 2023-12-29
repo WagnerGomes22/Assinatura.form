@@ -3,6 +3,7 @@ function submitForm() {
     let nome = document.getElementById('name').value.toUpperCase();
     let sobrenome = document.getElementById('sobrenome').value.toUpperCase();
     let setor = document.getElementById('setor').value;
+    let setorad = document.getElementById('setor-ad').value;
     let imgElement = document.createElement('img');
     let telefone = document.getElementById('telefone').value;
     document.getElementById('btn-copiar-assinatura').style.display = 'inline-block';
@@ -14,7 +15,7 @@ function submitForm() {
 
     const validarStrings = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/;
 
-    if (!validarStrings.test(nome) || !validarStrings.test(sobrenome) || !validarStrings.test(setor)) {
+    if (!validarStrings.test(nome) || !validarStrings.test(sobrenome) || !validarStrings.test(setorad) || !validarStrings.test(setor)) {
         alert('Por favor, preencha todos os campos.');
         return;
     }
@@ -25,7 +26,7 @@ function submitForm() {
     //     return;
     // }
 
-    const validarCelular = /^\d{2}\d{8}$/;
+    const validarCelular = /^\d{2}\d{9}$/;
 
     if (telefone && !validarCelular.test(telefone)) {
         alert('Por favor, insira um número de celular válido ou deixe em branco.');
@@ -37,8 +38,8 @@ function submitForm() {
 
     const numerosDeTelefone = telefone ? `<p id="tel">Cel. + ${telefone} / Tel. + 55 11 2364.9621</p>` : '<p id="tel">Tel. + 55 11 2364.9621</p>';
 
-
     setor = capitalizeFirstLetter(setor);
+    setorad = capitalizeFirstLetter(setorad);
 
     let assinatura =
         '<b style="color:rgb(255,153,0);font-size:12.8px">______________________________<wbr>___________</b>' +
@@ -47,7 +48,7 @@ function submitForm() {
         '&nbsp' +
         `<strong>${sobrenome}</strong>` +
         '<br>' +
-        setor +
+        `${setor}${setorad ? ` / ${setorad}` : ''}` +
         numerosDeTelefone +
         '<p id="endereco"><a href="https://www.google.com.br/maps/place/Av.+Dr.+Cardoso+de+Melo,+878+-+Vila+Olimpia,+S%C3%A3o+Paulo+-+SP/@-23.5994907,-46.6845672,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce574db507d2a5:0x1532f65db5b9bcc7!8m2!3d-23.5994907!4d-46.6823785?shorturl=1">Av. Cardoso de Melo 878 - Vila Olímpia - São Paulo - SP 04548-003</a></p>' +
         '<br>' +
@@ -59,6 +60,7 @@ function submitForm() {
     document.getElementById('nome').value = '';
     document.getElementById('sobrenome').value = '';
     document.getElementById('setor').value = '';
+    document.getElementById('setorad').value = '';
     document.getElementById('telefone').value = '';
     return assinatura;
 

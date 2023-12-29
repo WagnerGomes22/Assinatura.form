@@ -44,7 +44,6 @@ body {
   border-radius: 15px;
 }
 
-
 .background::before {
   content: "";
   background-image: url('https://a-us.storyblok.com/f/1006947/x/e39e2f116a/favicon.ico');
@@ -69,14 +68,18 @@ fieldset {
 }
 
 
-.campo.setor {
-  margin-left: 20px;
+.campo.setor-Primario{
+  margin-left: 21px;
 }
 
-.campo.setor.ad {
-  margin-right: auto; /* Move para o lado direito */
+.campo.setor-Secundario{
+  margin-top: 19px;
+  
 }
 
+::placeholder{
+  font-size: 14px;
+}
 
 
 input,
@@ -140,6 +143,7 @@ label {
 }
 
 .div-botao-form {
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -174,7 +178,7 @@ label {
 }
 
 #resultado {
-  font-family: arial, sans-serif;
+  font-family: 'Roboto';
   margin-top: 20px;
   font-size: 0.6rem;
   background: white;
@@ -187,8 +191,9 @@ label {
   flex-direction: column;
   display: flex;
   margin-bottom: 40px;
-  width: 40%;
+  width: 48%;
   margin-left: 20px;
+  font-family: "Roboto";
 }
 
 .info-resultado {
