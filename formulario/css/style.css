@@ -70,13 +70,11 @@ fieldset {
 
 
 
-.campo.setor-Primario {
-display: flex;
+.campo.setor-Primario, 
+.campo.setor-Secundario  {
+  margin-left: 20px;
 }
 
-.campo.setor-Secundario {
-display: flex;
-}
 
 
 ::placeholder {
@@ -131,6 +129,19 @@ select {
   color: black;
   cursor: pointer;
 }
+select {
+  /* Outras propriedades CSS para o seu select */
+  appearance: none; /* Desativa a aparência padrão do sistema operacional */
+  -moz-appearance: none; /* Para Firefox */
+  -webkit-appearance: none; /* Para navegadores WebKit (Chrome, Safari) */
+}
+
+select::-ms-expand {
+  display: none; /* Remove a seta no Internet Explorer */
+}
+
+/* Restante do seu código... */
+
 
 
 select:focus {
