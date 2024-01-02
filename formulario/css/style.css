@@ -10,8 +10,8 @@
 body {
   background: linear-gradient(to right, #FFA100, #FF4500);
   font-size: 1rem;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 27%;
+  margin-right: 27%;
   margin-top: 1%;
   justify-content: center;
 
@@ -40,7 +40,7 @@ body {
 
 .background {
   background-color: #f3f3f3;
-  padding: 30px;
+  padding: 40px;
   border-radius: 15px;
 }
 
@@ -65,19 +65,21 @@ fieldset {
   font-family: 'Roboto';
   gap: 15px;
   justify-content: space-between;
-}
-
-
-.campo.setor-Primario{
-  margin-left: 21px;
-}
-
-.campo.setor-Secundario{
-  margin-top: 19px;
   
 }
 
-::placeholder{
+
+
+.campo.setor-Primario {
+display: flex;
+}
+
+.campo.setor-Secundario {
+display: flex;
+}
+
+
+::placeholder {
   font-size: 14px;
 }
 
@@ -101,12 +103,12 @@ select {
   box-shadow: 2px 2px 2px black;
   background-color: #f3f3f3;
   color: #000;
+  display: block;
 }
 
 #resultado {
   font-size: 1.3rem;
 }
-
 .campo {
   margin-bottom: 1rem;
   border-radius: 50%;
@@ -191,7 +193,7 @@ label {
   flex-direction: column;
   display: flex;
   margin-bottom: 40px;
-  width: 48%;
+  width: 42%;
   margin-left: 20px;
   font-family: "Roboto";
 }
