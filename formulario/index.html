@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <script src="js/script.js" defer></script>
-    <!-- <link
+    <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&display=swap"
-        rel="stylesheet"> -->
+        rel="stylesheet">
     <link rel="shortcut icon" href="https://a-us.storyblok.com/f/1006947/x/e39e2f116a/favicon.ico" type="image/x-icon">
 
     <title>Apis3/Assinatura</title>
@@ -19,7 +25,7 @@
     <div class="background">
         <header>
             <div>
-                <h1 class="titulo">Crie sua assinatura</h1>
+                <h1 class="titulo">Crie sua <span>assinatura</span></h1>
                 <p class="subtitulo">Complete suas informações</p>
             </div>
         </header>
@@ -27,39 +33,23 @@
             <form>
                 <fieldset class="grupo">
                     <div class="camponome">
-                        <label for="nome"><strong>Nome:</strong></label>
+                        <label for="nome">Nome:</label>
                         <input type="text" name="name" id="name" placeholder="Digite seu Nome" required>
                     </div>
                     <div class="camposobrenome">
-                        <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                        <label for="sobrenome">Sobrenome:</label>
                         <input type="text" name="Sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome">
                     </div>
 
                 </fieldset>
 
                 <div class="campocelular">
-                    <label for="telefone"><strong>Celular:</strong></label>
+                    <label for="telefone">Celular:</label>
                     <input type="tel" name="telefone" id="telefone" placeholder="Opicional">
                 </div>
 
-
-
-                <div class="campo setor-Primario">
-                    <label for="setor"><strong>Qual o seu setor?</strong></label>
-                    <select id="setor">
-
-                        <option selected disabled value="">Selecione</option>
-                        <option value="desenvolvimento">Desenvolvimento</option>
-                        <option value="admiministrativo">Admiministrativo</option>
-                        <option value="design">Design</option>
-                        <option value="analista">Analista de dados</option>
-                        <option value="otimização-orgânica">Otimização Orgânica</option>
-
-                    </select>
-
-                </div>
                 <div class="campo setor-Secundario">
-                    <label for="setor"><strong>Setor adicional</strong></label>
+                    <label for="setor">Setor adicional</label>
                     <select id="setor-ad">
 
                         <option selected disabled value="">Selecione</option>
@@ -68,10 +58,30 @@
                         <option value="design">Design</option>
                         <option value="analista">Analista de dados</option>
                         <option value="otimização-orgânica">Otimização Orgânica</option>
+                        <option value="dados">Dados</option>
 
                     </select>
 
                 </div>
+
+
+
+                <div class="campo setor-Primario">
+                    <label for="setor">Qual o seu setor?</label>
+                    <select  id="setor">
+
+                        <option selected disabled value="">Selecione</option>
+                        <option value="desenvolvimento">Desenvolvimento</option>
+                        <option value="admiministrativo">Admiministrativo</option>
+                        <option value="design">Design</option>
+                        <option value="analista">Analista de dados</option>
+                        <option value="otimização-orgânica">Otimização Orgânica</option>
+                        <option value="dados">Dados</option>
+
+                    </select>
+
+                </div>
+               
 
             </form>
             <div class="div-botao-form">
@@ -84,7 +94,6 @@
                 <button type="submit" id="btn-copiar-assinatura" class="btn-copiar-assinatura"
                     onclick="CopiarAssinatura()">Copiar</button>
         </main>
-    </div>
     </div>
 </body>
 

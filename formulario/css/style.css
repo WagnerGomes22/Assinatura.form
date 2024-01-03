@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
 
 body {
-  background: linear-gradient(to right, #FFA100, #FF4500);
+  background-color: #f3f3f3;
   font-size: 1rem;
   margin-left: 27%;
   margin-right: 27%;
@@ -17,31 +17,37 @@ body {
 
 }
 
+
 .titulo {
   align-items: center;
   justify-content: center;
   display: flex;
   border-bottom: 2.3px solid rgb(0, 0, 0);
   padding-bottom: 4px;
-  color: #000000;
+  color: white;
   text-transform: uppercase;
-  font-weight: lighter;
-  font-family: 'Montserrat';
+  font-weight: 500;
+  font-family: 'Poppins';
+}
+
+span {
+  color: #FFA100;
+  padding-left: 8px;
 }
 
 .subtitulo {
   text-align: center;
   padding: 20px;
   font-size: 16px;
-  color: #000;
+  color: white;
   font-weight: lighter;
   font-family: 'Montserrat';
 }
 
 .background {
-  background-color: #f3f3f3;
+  background-color: #333;
   padding: 40px;
-  border-radius: 15px;
+  border-radius: 5%;
 }
 
 .background::before {
@@ -65,14 +71,18 @@ fieldset {
   font-family: 'Roboto';
   gap: 15px;
   justify-content: space-between;
-  
+
 }
 
 
 
-.campo.setor-Primario, 
-.campo.setor-Secundario  {
+.campo.setor-Primario {
   margin-left: 20px;
+}
+
+.campo.setor-Secundario{
+  float: right;
+  margin-right: 30px ;
 }
 
 
@@ -107,6 +117,7 @@ select {
 #resultado {
   font-size: 1.3rem;
 }
+
 .campo {
   margin-bottom: 1rem;
   border-radius: 50%;
@@ -117,7 +128,7 @@ select {
   margin-bottom: 0.2rem;
   display: block;
   font-size: 17px;
-  color: black;
+  color: white;
 }
 
 select {
@@ -126,8 +137,12 @@ select {
   border-radius: 5px;
   box-shadow: 2px 2px 2px black;
   background-color: #f3f3f3;
-  color: black;
+  color: rgb(0, 0, 0);
   cursor: pointer;
+}
+
+option:nth-child(1){
+  background: #FFA100;
 }
 
 select:focus {
@@ -138,7 +153,7 @@ select:focus {
 
 
 label {
-  color: black;
+  color: white;
 }
 
 .div-botao-form {
@@ -190,7 +205,7 @@ label {
   flex-direction: column;
   display: flex;
   margin-bottom: 40px;
-  width: 42%;
+  width: 35%;
   margin-left: 20px;
   font-family: "Roboto";
 }
@@ -211,7 +226,7 @@ label {
 }
 
 #endereco {
-  line-height: 2;
+  line-height: 0;
 }
 
 #canais {

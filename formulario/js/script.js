@@ -15,16 +15,10 @@ function submitForm() {
 
     const validarStrings = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/;
 
-    if (!validarStrings.test(nome) || !validarStrings.test(sobrenome) || !validarStrings.test(setorad) || !validarStrings.test(setor)) {
-        alert('Por favor, preencha todos os campos.');
+    if (!validarStrings.test(nome) || !validarStrings.test(sobrenome) || !validarStrings.test(setor)) {
+        alert('Por favor, verifique todos os campos.');
         return;
     }
-
-    // caso esteja vazio exibir uma alert
-    // if (nome === '' || sobrenome === '' || setor === '') {
-    //     alert('Por favor, preencha todos os campos.');
-    //     return;
-    // }
 
     const validarCelular = /^\d{2}\d{9}$/;
 
@@ -35,6 +29,8 @@ function submitForm() {
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
+
+    
 
     const numerosDeTelefone = telefone ? `<p id="tel">Cel. + ${telefone} / Tel. + 55 11 2364.9621</p>` : '<p id="tel">Tel. + 55 11 2364.9621</p>';
 
