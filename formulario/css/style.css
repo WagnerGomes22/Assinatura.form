@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&display=swap');
+:root {
+  ---corPrimaria: #f3f3f3;
+  ---corSecundaria: #333;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+
 
 body {
   background-color: #f3f3f3;
@@ -27,7 +34,7 @@ body {
   color: white;
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Poppins';
+  font-family: 'Roboto';
 }
 
 span {
@@ -77,12 +84,14 @@ fieldset {
 
 
 .campo.setor-Primario {
-  margin-left: 20px;
+  margin-left: 21px;
+  font-family: 'Roboto';
 }
 
-.campo.setor-Secundario{
+.campo.setor-Secundario {
   float: right;
-  margin-right: 30px ;
+  margin-right: 25px;
+  margin-top: -72px;
 }
 
 
@@ -141,7 +150,7 @@ select {
   cursor: pointer;
 }
 
-option:nth-child(1){
+option:nth-child(1) {
   background: #FFA100;
 }
 
@@ -201,7 +210,7 @@ label {
   display: none;
 }
 
-.campocelular {
+.campo-celular {
   flex-direction: column;
   display: flex;
   margin-bottom: 40px;
@@ -226,7 +235,7 @@ label {
 }
 
 #endereco {
-  line-height: 0;
+  line-height: 1;
 }
 
 #canais {

@@ -5,18 +5,18 @@
         margin-right: 5%;
     }
 
-    .titulo{
-        font-size: 25px;
+    .titulo {
+        font-size: 23px;
         padding: 15px;
     }
 
-    .subtitulo{
+    .subtitulo {
         font-size: 12px;
     }
 
     .background {
         padding: 20px;
-        border-radius: 3%;
+        border-radius: 2%;
 
     }
 
@@ -34,42 +34,45 @@
         align-items: stretch;
     }
 
+    .campo.setor-Primario {
+        margin-top: -10px;
+    }
+
     .campo.setor-Primario,
     .campo.setor-Secundario {
         display: flex;
-        
+        flex-wrap: wrap;
+        margin-left: 24px;
     }
 
-    .campo.setor-Primario label,
-    .campo.setor-Secundario label {
-       
-        color: rgb(255, 255, 255); /* Altere para a cor desejada */
+    .campo.setor-Secundario {
+        margin-top: 3px;
     }
 
-    .campo.setor-Primario select,
-    .campo.setor-Secundario select {
-        font-size: 14px;
-        border: 1px solid white; 
-        border-radius: 5px;
-        box-shadow: 2px 2px 2px black;
-        background-color: #f3f3f3;
-        color: rgb(0, 0, 0); 
-        cursor: pointer;
-    }
-    
 
-    .campocelular {
-        width: 47%;
+    .campo-celular {
+        width: 62%;
         margin-left: 21px;
     }
 
     .div-botao-form,
     .div-botao-copiar {
-        margin-top: 20px;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+
+    .div-botao-form {
+        margin: 10px 10px 10px;
+    }
+
+    .div-botao-copiar {
+        margin-bottom: 15px;
     }
 
     .btn-form,
     .btn-copiar-assinatura {
-        padding: 10px 15px;
+        padding: 8px 20px;
     }
-};
+}
+
+;
