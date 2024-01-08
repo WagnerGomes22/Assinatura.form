@@ -49,9 +49,15 @@
         margin-top: 3px;
     }
 
+    .campo-agenda{
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
 
     .campo-celular {
-        width: 62%;
+        width: 61%;
         margin-left: 21px;
     }
 

@@ -19,9 +19,18 @@ body {
   font-size: 1rem;
   margin-left: 27%;
   margin-right: 27%;
-  margin-top: 1%;
-  justify-content: center;
+  margin-top: 2%;
+  /* justify-content: center; */
 
+}
+
+body::before{
+  content: "";
+  background-image: url('https://a-us.storyblok.com/f/1006947/300x65/6db080fb33/apis3-group.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0rem,0rem;
+  padding: 4.3rem;
 }
 
 
@@ -30,7 +39,6 @@ body {
   justify-content: center;
   display: flex;
   border-bottom: 2.3px solid rgb(0, 0, 0);
-  padding-bottom: 4px;
   color: white;
   text-transform: uppercase;
   font-weight: 500;
@@ -57,13 +65,14 @@ span {
   border-radius: 5%;
 }
 
-.background::before {
+/* .background::before {
   content: "";
-  background-image: url('https://a-us.storyblok.com/f/1006947/x/e39e2f116a/favicon.ico');
+  background-image: url('https://a-us.storyblok.com/f/1006947/300x65/6db080fb33/apis3-group.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 1.3rem;
-}
+  background-position: 0rem;
+  padding: 5.3rem;
+} */
 
 fieldset {
   margin-top: 3%;
@@ -90,10 +99,14 @@ fieldset {
 
 .campo.setor-Secundario {
   float: right;
-  margin-right: 25px;
+  margin-right: 21px;
   margin-top: -72px;
 }
 
+.campo-agenda{
+  float: right;
+  margin-right: 20px;
+}
 
 
 ::placeholder {
@@ -141,7 +154,7 @@ select {
 }
 
 select {
-  font-size: 16px;
+  font-size: 17px;
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 2px 2px 2px black;
@@ -198,6 +211,25 @@ label {
   background-color: white;
   transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
   display: none;
+  font-family: "Roboto";
+}
+
+#btn-email{
+  background-color:rgb(255, 187, 0);
+}
+
+#btn-email:hover{
+  background-color: blue;
+}
+
+.encaminhar a{
+  text-decoration: none;
+  color: black;
+}
+
+.encaminhar{
+  margin-top: 10px;
+ 
 }
 
 #resultado {
@@ -235,11 +267,11 @@ label {
 }
 
 #endereco {
-  line-height: 1;
+margin-top: -15px;
 }
 
 #canais {
-  line-height: 0;
+  margin-top: -27px;
 }
 
 /* .campo input[type="text"], .campo input[type="email"] */
