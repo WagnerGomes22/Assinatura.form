@@ -7,6 +7,7 @@ function submitForm() {
     let setorad = document.getElementById('setor-ad').value;
     let agenda = document.getElementById('agenda').value;
     let imgElement = document.createElement('img');
+    let Inputddd = document.getElementById('ddd').value;
     let telefone = document.getElementById('telefone').value;
     document.getElementById('btn-copiar-assinatura').style.display = 'inline-block';
     document.getElementById('btn-email').style.display = 'inline-block';
@@ -25,29 +26,28 @@ function submitForm() {
 
     const validarLinkAgenda = /^(ftp|http|https):\/\/[^ "]+$/;
 
-    if (!agenda) {
-        alert('Por favor, preencha o campo de agenda.');
-        return;
-    }
-
-    if (!validarLinkAgenda.test(agenda)) {
+    if (agenda && !validarLinkAgenda.test(agenda)) {
         alert('Por favor, insira um link de agenda válido.');
         return;
     }
 
-    const validarCelular = /^\d{2}\d{9}$/;
+    const dddRegex = /^\d{0,4}$/;
+
+    if (Inputddd && !dddRegex.test(Inputddd)) {
+        alert("Por favor, insira um DDD válido.");
+        return;
+    }
+
+    const validarCelular = /^\d{5}-\d{4}$/;    ;
 
     if (telefone && !validarCelular.test(telefone)) {
         alert('Por favor, insira um número de celular válido ou deixe em branco.');
         return;
+    
     }
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
-
-
-    const numerosDeTelefone = telefone ? `<p id="tel">Cel. + ${telefone} / Tel. + 55 11 2364.9621</p>` : '<p id="tel">Tel. + 55 11 2364.9621</p>';
+    
+   
+    const numerosDeTelefone = telefone ? `<p id="tel">Cel. +${Inputddd} ${telefone} / Tel. +55 11 2364.9621</p>` : '<p id="tel">Tel. +55 11 2364.9621</p>';
 
     const linkAgenda = agenda ? `<p id="agenda">Se quiser marca uma reunião comigo,<a href="${agenda}"> Minha agenda está disponível aqui.</a></p>` : '';
 
@@ -63,7 +63,7 @@ function submitForm() {
         `<strong> ${sobrenome}</strong>` +
         '<br>'+ 
         `${setor}${setorad ? ` / ${setorad}` : ''}` +
-        numerosDeTelefone +
+        numerosDeTelefone + `${Inputddd}` +
         '<p id="endereco"><a href="https://www.google.com.br/maps/place/Av.+Dr.+Cardoso+de+Melo,+878+-+Vila+Olimpia,+S%C3%A3o+Paulo+-+SP/@-23.5994907,-46.6845672,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce574db507d2a5:0x1532f65db5b9bcc7!8m2!3d-23.5994907!4d-46.6823785?shorturl=1">Av. Cardoso de Melo 878 - Vila Olímpia - São Paulo - SP 04548-003</a></p>'+
         '<br>'+  
         '<p id="canais">Visite nossos canais: <strong> <a href="https://www.google.com/url?q=https%3A%2F%2Fapis3.com.br%2F&sa=D&sntz=1&usg=AFQjCNGrdVRAS4aXMeBle3ZGgWzsoRowIg"><strong> Site</a> / <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.facebook.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNEfGJb1kooKxeQDvBknllnUGA-ePA"><strong>Facebook</a> / <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.instagram.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNFo_9x1n7MClVvBR1Q3DFqEU_PRaA"><strong>Instagram</a> / <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.instagram.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNFo_9x1n7MClVvBR1Q3DFqEU_PRaA"><strong>Linkedin</a> / <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.instagram.com%2Fapis3oficial%2F&sa=D&sntz=1&usg=AFQjCNFo_9x1n7MClVvBR1Q3DFqEU_PRaA"> <strong>Youtube</a></p>' + `<img src="${imgElement.src}" width="${imgElement.width}">` +
@@ -76,9 +76,14 @@ function submitForm() {
     document.getElementById('agenda').value = '';
     document.getElementById('setor').value = '';
     document.getElementById('setorad').value = '';
+    document.getElementById('ddd').value = '';
     document.getElementById('telefone').value = '';
+    
     return assinatura;
 
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 }
 
 

@@ -54,11 +54,18 @@
                     <input type="url" name="agenda" id="agenda" placeholder="Cole o link aqui">
                 </div>
 
-                <div class="campo-celular">
-                    <label for="telefone">Celular:</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="Opicional">
-                </div>
+                <div class="juntos">
 
+                    <div class="campo-ddd">
+                        <label for="ddd">DDD:</label>
+                        <input type="tel" name="ddd" id="ddd" placeholder="DDD">
+                    </div>
+
+                    <div class="campo-celular">
+                        <label for="telefone">Celular:</label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="Opicional">
+                    </div>
+                </div>
                 <div class="campo setor-Primario">
                     <label for="setor">Qual o seu setor?</label>
                     <select id="setor">
@@ -77,9 +84,10 @@
 
                 <div class="campo setor-Secundario">
                     <label for="setor">Setor adicional</label>
-                    <select id="setor-ad">
+                    <select id="setor-ad" dir="ltr">
 
                         <option selected disabled value="">Selecione</option>
+                        <option value="">Nenhuma</option>
                         <option value="desenvolvimento">Desenvolvimento</option>
                         <option value="admiministrativo">Admiministrativo</option>
                         <option value="design">Design</option>
@@ -91,25 +99,25 @@
 
                 </div>
 
-
-
-
-
-
             </form>
+
             <div class="div-botao-form">
                 <button type="submit" class="btn-form" onclick="submitForm()">Gerar</button>
             </div>
 
-            <div id="resultado"></div>
+            <div id="resultado">
+                
+            </div>
 
             <div class="div-botao-copiar">
-                <button type="submit" id="btn-copiar-assinatura" class="btn-copiar-assinatura"
+                <button type="submit
+                " id="btn-copiar-assinatura" class="btn-copiar-assinatura"
                     onclick="CopiarAssinatura()">Copiar</button>
 
-                <div class="encaminhar" >
-                    <button type="button" class="btn-copiar-assinatura" id="btn-email"><a href="https://mail.google.com/mail/u/0/#inbox"
-                            target="_blank">Ir para o Gmail</button></a>
+                <div class="encaminhar">
+                    <button type="button" class="btn-copiar-assinatura" id="btn-email">
+                        <a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">Ir para o
+                            Gmail</button></a>
                 </div>
             </div>
 

@@ -19,7 +19,7 @@ body {
   font-size: 1rem;
   margin-left: 27%;
   margin-right: 27%;
-  margin-top: 2%;
+  margin-top: 1%;
   /* justify-content: center; */
 
 }
@@ -30,7 +30,7 @@ body::before{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0rem,0rem;
-  padding: 4.3rem;
+  padding:3.7rem;
 }
 
 
@@ -65,14 +65,6 @@ span {
   border-radius: 5%;
 }
 
-/* .background::before {
-  content: "";
-  background-image: url('https://a-us.storyblok.com/f/1006947/300x65/6db080fb33/apis3-group.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 0rem;
-  padding: 5.3rem;
-} */
 
 fieldset {
   margin-top: 3%;
@@ -100,18 +92,19 @@ fieldset {
 .campo.setor-Secundario {
   float: right;
   margin-right: 21px;
-  margin-top: -72px;
+  margin-top: -75px;
 }
 
 .campo-agenda{
   float: right;
-  margin-right: 20px;
+  margin-right: 19.8px;
 }
 
 
 ::placeholder {
   font-size: 14px;
 }
+
 
 
 input,
@@ -163,9 +156,14 @@ select {
   cursor: pointer;
 }
 
-option:nth-child(1) {
+#setor-ad option:nth-child(1) {
   background: #FFA100;
 }
+
+#setor option:nth-child(1) {
+  background: #FFA100;
+}
+
 
 select:focus {
   outline: none;
@@ -219,7 +217,7 @@ label {
 }
 
 #btn-email:hover{
-  background-color: blue;
+  background-color: rgb(255, 21, 13);
 }
 
 .encaminhar a{
@@ -242,12 +240,42 @@ label {
   display: none;
 }
 
+.campo-ddd {
+  margin-bottom: 9px;
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: column;
+  width: 14%; /* Ajuste conforme necessário */
+}
+
+.campo-ddd label {
+  margin-top: 0.2rem;
+  display: block;
+  font-size: 17px;
+  color: white;
+}
+
+.campo-ddd input {
+  font-size: 1rem;
+  padding: 3px;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 2px black;
+  background-color: #f3f3f3;
+  color: #000;
+  display: block;
+}
+
+.juntos{
+  display: flex;
+  margin-left: 20px;
+}
+
 .campo-celular {
   flex-direction: column;
   display: flex;
-  margin-bottom: 40px;
-  width: 35%;
-  margin-left: 20px;
+  margin-top: 5px;
+  width: 43%;
+  margin-left: 10px;
   font-family: "Roboto";
 }
 
